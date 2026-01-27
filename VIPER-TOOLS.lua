@@ -1827,12 +1827,12 @@ function main()
 		LoadTextureFunc()
 	end
 
-	[[local lastver = update():getLastVersion()
+	local lastver = update():getLastVersion()
     sampAddChatMessage('Скрипт загружен, версия: '..lastver, -1)
     if thisScript().version ~= lastver then
 		sampAddChatMessage('Вышло обновление скрипта ('..thisScript().version..' -> '..lastver..'). Скрипт обновляется!', -1)
         update():download()
-    end]]
+    end
 
 
 	cfg.main.zapusk4 = cfg.main.zapusk4 + 1	
