@@ -1828,7 +1828,9 @@ function main()
 	end
 
 	local lastver = update():getLastVersion()
+	if lastver ~= nil and lastver ~= 'UNKNOWN' then
     sampAddChatMessage('Скрипт загружен, версия: '..lastver, -1)
+	sampAddChatMessage('Не удалось проверить наличие обновлений (ошибка сервера).', -1)
     if thisScript().version ~= lastver then
 		sampAddChatMessage('Вышло обновление скрипта ('..thisScript().version..' -> '..lastver..'). Скрипт обновляется!', -1)
         update():download()
